@@ -36,11 +36,12 @@ text-align: center;
 color: var(--grey-50);
 `
 
-    const CopyLinkIconStyled = styled(HiOutlineClipboardCopy)`
+const CopyLinkIconStyled = styled(HiOutlineClipboardCopy)`
 color: var(--secondary1);
 height: 30px;
 width: 30px;
 `
 const DescriptionStyled = styled.p`
 font-size: 0.6em;
+margin: 3px 0 0 0;
 `

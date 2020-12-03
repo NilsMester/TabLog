@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 import {TiArrowBack} from "react-icons/ti";
 import {useHistory} from "react-router-dom";
 import {RiSave3Line} from "react-icons/ri";
+import {IoIosArrowBack} from "react-icons/io";
 
 export default function TabBar({ onSave, recordData}){
     const history = useHistory();
@@ -40,7 +41,7 @@ border-radius: 75% 0 0 0;
 background-color: var(--grey-main)
 `
 
-const HistoryGoBackButtonStyled = styled(TiArrowBack)`
+const HistoryGoBackButtonStyled = styled(IoIosArrowBack)`
 height: 35px;
 width: 35px;
 color: var(--secondary1);
