@@ -43,7 +43,7 @@ ${(props) =>
           overflow: scroll;
           list-style: none;
           text-align: center;
-          padding: 0;
+          padding: 0 0 0 4px;
           margin: 0; 
           overflow-y: scroll;
           overflow-x: hidden;
