@@ -22,15 +22,7 @@ console.log(recordData.recordLink)
                 <PasteLinkFromClipboard recordData={recordData} setRecordData={setRecordData} handleChange={handleChange}/>
             </LinkSectionStyled>
 
-                <TagsSectionStyled>
-            <p>Tags</p>
-            <UserTagList formTags tags={recordData.tagList} onTagClick={tag => setRecordData({
-                ...recordData,
-                tagList: recordData.tagList.filter(existingTag => existingTag !== tag)
-            })}/>
-                </TagsSectionStyled>
-
-                <LableStyled>
+                <TitelLableStyled>
                     Titel
                     <InputField
                         titel
@@ -38,7 +30,15 @@ console.log(recordData.recordLink)
                         value={recordData.titel || ""}
                         onChange={handleChange}
                         type="text"/>
-                </LableStyled>
+                </TitelLableStyled>
+
+                <TagsSectionStyled>
+            <p>Tags</p>
+            <UserTagList formTags tags={recordData.tagList} onTagClick={tag => setRecordData({
+                ...recordData,
+                tagList: recordData.tagList.filter(existingTag => existingTag !== tag)
+            })}/>
+                </TagsSectionStyled>
 
                 <PreviewStyled>
                 <CheckForLink />
@@ -70,7 +70,6 @@ console.log(recordData.recordLink)
                 minLine={0}
                 url={recordData.recordLink}
             />)} return null }
-
 }
 
 
@@ -89,6 +88,11 @@ margin: 0 10px 0 0;
 
 const LableStyled = styled.label`
 margin: 0 10px 0 0;
+`
+
+const TitelLableStyled = styled.label`
+margin: 0 10px 0 0;
+width: 63vw;
 `
 
 const TagsSectionStyled = styled.section`

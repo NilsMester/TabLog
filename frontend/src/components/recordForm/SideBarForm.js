@@ -71,7 +71,12 @@ top: 12%;
 
 const SidebarSection2Styled = styled.div`
 position: relative;
-top: 32%;
+top: 30%;
+width: 33vw;
+align-text: center;
+font-size: 0.8em;
+color: var(--grey-main);
+
 `
 
 

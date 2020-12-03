@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import styled from 'styled-components/macro';
 import InputField from "../UI/InputField";
+import {RiAddCircleFill} from "react-icons/ri";
 
 export default function AddNewTagInput({recordData, setRecordData}){
 
     const [addNewTag, setAddNewTag] = useState("");
 
     return (
-        <SidebarSection4Styled>
+        <LabelStyled>
             <InputField search
                         name="addNewTag"
                         value={addNewTag || ""}
                         onChange={event => setAddNewTag(event.target.value)}
                         type="text"/>
-            <button type="button" onClick={handleTagKlickButton}>Add Tag</button>
-        </SidebarSection4Styled>
+            <NewRecordButtonStyled type="button" onClick={handleTagKlickButton}/>
+        </LabelStyled>
     )
 
     function handleTagKlickButton() {
@@ -23,9 +24,20 @@ export default function AddNewTagInput({recordData, setRecordData}){
     }
 }
 
-const SidebarSection4Styled = styled.label`
-display: grid;
-align-content: end;
-justify-content: end;
+const DivStyled = styled.div`
 `
 
+const LabelStyled = styled.label`
+padding: 0 4px;
+font-size: 0.8em;
+color: var(--grey-main);
+text-align: center;
+`
+const NewRecordButtonStyled = styled(RiAddCircleFill)`
+position: relative;
+top: -1.4vh;
+left: 11vw;
+height: 30px;
+width: 30px;
+color: var(--orange-75);
+`

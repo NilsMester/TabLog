@@ -38,12 +38,14 @@ ${(props) =>
         
         : props.formTags
         ? css`
-          width: 64vw;
+          width: 63vw;
+          height: 20vh;
           overflow: scroll;
           list-style: none;
           text-align: center;
           padding: 0;
           margin: 0; 
+          overflow-y: scroll;
           overflow-x: hidden;
           -ms-overflow-style: none;
           ::-webkit-scrollbar {
