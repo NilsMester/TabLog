@@ -4,11 +4,12 @@ export default createGlobalStyle`
   :root {
    --grey-main: #2C2C2C;
    --grey-50: #5F5F5F;
+   --grey-25: #d5d5d5;
    
    --orange-main: #FEA676;
    --orange-75: #FFC491;
    
-   --secondary1: #96EDE3;
+   --secondary1: #87d5cc;
    --secondary2: #ed96a0;
   
    --white1: #f8f8f8; //Guyabano
