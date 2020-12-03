@@ -91,8 +91,7 @@ margin: 0 10px 0 0;
 `
 
 const TitelLableStyled = styled.label`
-margin: 0 10px 0 0;
-width: 63vw;
+width: 62vw;
 `
 
 const TagsSectionStyled = styled.section`
