@@ -62,13 +62,14 @@ const FormStyled = styled.form`
     display: grid;
     grid-template-rows: min-content 1fr min-content  min-content 0.5fr min-content;
     grid-row-gap: 12px;
+    padding: 10px 0 10px 10px;
+
 `;
 
 const MainGridStyled = styled.div`
 display: grid;
 grid-template-columns: 1fr min-content;
 position: relative;
-padding: 10px 0 10px 10px;
 `
 
 

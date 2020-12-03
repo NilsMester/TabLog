@@ -27,8 +27,9 @@ ${(props) =>
           height: 40vh;
           width: 33vw;
           justify-content: end;
-          align-content: end;
-          overflow-x: scroll;
+          align-content: start;
+          overflow-y: scroll;
+          overflow-x: hidden;
           -ms-overflow-style: none;
           ::-webkit-scrollbar {
           display: none;
@@ -37,12 +38,17 @@ ${(props) =>
         
         : props.formTags
         ? css`
-          width: 66vw;
+          width: 64vw;
           overflow: scroll;
           list-style: none;
           text-align: center;
           padding: 0;
           margin: 0; 
+          overflow-x: hidden;
+          -ms-overflow-style: none;
+          ::-webkit-scrollbar {
+          display: none;
+          }
         
         ` 
         
