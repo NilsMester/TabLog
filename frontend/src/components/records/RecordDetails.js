@@ -4,7 +4,7 @@ import UserTagList from "../tags/UserTagList";
 import CopyLinkToClipboard from "../CopyLinkToClipboard";
 import OpenLink from "../OpenLink";
 
-export default function Record({record, actions = [], className}) {
+export default function Record({record, className}) {
 
     return (
         <SingleRecordStyled className={className}>
@@ -14,7 +14,6 @@ export default function Record({record, actions = [], className}) {
             <TextStyled>{record.description}</TextStyled>
             <ActionSection>
                 <OpenLink recordLink={record.recordLink}/>
-                <div>{actions}</div>
                 <CopyLinkToClipboard recordLink={record.recordLink} />
             </ActionSection>
         </SingleRecordStyled>
@@ -38,7 +37,7 @@ align-items: center;
 
 const TitelStyled = styled.h2`
 margin: 0;
-color: var(--grey-main);
+color: var(--grey-50);
 text-align: center;
 `
 

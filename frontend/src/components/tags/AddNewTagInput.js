@@ -8,14 +8,15 @@ export default function AddNewTagInput({recordData, setRecordData}){
     const [addNewTag, setAddNewTag] = useState("");
 
     return (
-        <LabelStyled>
+        <SidebarSection4Styled>
             <InputField search
                         name="addNewTag"
+                        placeholder="Add new Tag"
                         value={addNewTag || ""}
                         onChange={event => setAddNewTag(event.target.value)}
                         type="text"/>
-            <NewRecordButtonStyled type="button" onClick={handleTagKlickButton}/>
-        </LabelStyled>
+            <NewRecordButtonStyled type="button" onClick={handleTagKlickButton}>Add Tag</NewRecordButtonStyled>
+        </SidebarSection4Styled>
     )
 
     function handleTagKlickButton() {
@@ -24,20 +25,17 @@ export default function AddNewTagInput({recordData, setRecordData}){
     }
 }
 
-const DivStyled = styled.div`
+const SidebarSection4Styled = styled.label`
+display: grid;
+align-content: center;
+justify-items: center
 `
 
-const LabelStyled = styled.label`
-padding: 0 4px;
-font-size: 0.8em;
-color: var(--grey-main);
-text-align: center;
-`
 const NewRecordButtonStyled = styled(RiAddCircleFill)`
-position: relative;
-top: -1.4vh;
-left: 11vw;
 height: 30px;
 width: 30px;
+position: relative;
+top: -8px;
 color: var(--orange-75);
 `
+
