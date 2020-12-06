@@ -63,7 +63,6 @@ grid-template-areas:
 "preview preview";
 row-gap: 24px;
 position: relative;
-padding: 10px 0 10px 10px;
 `
 
 

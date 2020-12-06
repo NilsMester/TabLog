@@ -38,6 +38,7 @@ ${(props) =>
         
         : props.formTags
         ? css`
+
           width: 62vw;
           height: 25vh;
           list-style: none;
@@ -51,7 +52,7 @@ ${(props) =>
           display: none;
           }
         `
-        
+
         : css`
           overflow: scroll;
           list-style: none;
