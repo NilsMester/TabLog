@@ -2,14 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   :root {
-   --grey-main: #2D2D2D;
+   --grey-main: #2C2C2C;
    --grey-50: #5F5F5F;
-   --grey-25: #d5d5d5;
    
    --orange-main: #FEA676;
    --orange-75: #FFC491;
    
-   --secondary1: #6BC4A6;
+   --secondary1: #96EDE3;
    --secondary2: #ed96a0;
   
    --white1: #f8f8f8; //Guyabano
@@ -32,12 +31,13 @@ export default createGlobalStyle`
   
   html, body {
     margin: 0;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Nunito', sans-serif;
+   
   }
   
   body{
     background-color: var(--white1);
-    color: var(--grey-50);
+     display: grid;
   }
    
   input, textarea {

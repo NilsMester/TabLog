@@ -8,7 +8,7 @@ export default function UserTagList ({tags, onTagClick, ...rest}) {
     return (
         <StyledTagsList {...rest}>
             {tags?.map((tag) => (
-                <UserTagListItem {...rest} key={tag} tag={tag} onClick={() => onTagClick(tag)}/>
+                <UserTagListItem key={tag} tag={tag} onClick={() => onTagClick(tag)}/>
             ))}
         </StyledTagsList>
     );
@@ -19,15 +19,15 @@ const StyledTagsList = styled.ul`
 ${(props) =>
     props.sidebar
         ? css`
+         
           list-style: none;
-          padding: 0 6px 0 0;
+          padding: 0;
           margin: 0;
           display: grid;
-          height: 30vh;
+          height: 40vh;
           width: 33vw;
           justify-content: end;
           align-content: start;
-          row-gap: 4px;
           overflow-y: scroll;
           overflow-x: hidden;
           -ms-overflow-style: none;
@@ -38,21 +38,20 @@ ${(props) =>
         
         : props.formTags
         ? css`
-
-          width: 62vw;
-          height: 25vh;
+          width: 64vw;
+          overflow: scroll;
           list-style: none;
           text-align: center;
           padding: 0;
-          margin: 0;
+          margin: 0; 
           overflow-x: hidden;
-          overflow-y: scroll;
           -ms-overflow-style: none;
           ::-webkit-scrollbar {
           display: none;
           }
-        `
-
+        
+        ` 
+        
         : css`
           overflow: scroll;
           list-style: none;

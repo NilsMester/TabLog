@@ -29,12 +29,12 @@ export default function UserRecordList () {
 }
 
 const StyledRecordsList = styled.ul`
-    padding: 16px 0 0 0;
     overflow: scroll;
     list-style: none;
     
     display:grid;
-    row-gap: 50px;
+    row-gap: 32px;
     grid-auto-rows: min-content;
     margin:0;
+    padding: 0;
 `;

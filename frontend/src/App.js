@@ -13,7 +13,6 @@ import TagsContextProvider from "./contexts/TagsContextProvider";
 import UserRecordListScreen from "./screens/userRecordListScreen/UserRecordListScreen";
 
 function App() {
-
     return (
         <UserContextProvider>
             <RecordContextProvider>
@@ -26,6 +25,7 @@ function App() {
                             <ProtectedRoute path="/newRecord" component={AddRecordScreen}/>
                             <ProtectedRoute path="/record/:id" component={DetailsRecordScreen}/>
                             <ProtectedRoute path="/edit/:id" component={EditRecordPage}/>
+
                             <Route path="/">
                                 <Redirect to="/records"/>
                             </Route>

@@ -11,11 +11,11 @@ export default function UserRecordItem({record, actions = [], className}) {
 
             <TitelStyled>{record.titel}</TitelStyled>
             <UserTagList tags={record.tagList}/>
-            <Actions>
+            <ActionSection>
                 <OpenLink recordLink={record.recordLink}/>
                 <div>{actions}</div>
                 <CopyLinkToClipboard recordLink={record.recordLink} />
-            </Actions>
+            </ActionSection>
         </SingleRecordStyled>
     )
 
@@ -24,19 +24,19 @@ export default function UserRecordItem({record, actions = [], className}) {
 const SingleRecordStyled = styled.section`
 display: grid;
 grid-template-rows: 5 (1fr);
-row-gap: 16px;
+row-gap: 8px;
 `;
 
-const Actions = styled.section`
+const ActionSection = styled.section`
 display: grid;
 grid-template-columns: 0.5fr 0.5fr 0.5fr;
+height: 35px;
 justify-items: center;
-align-items: center;
+align-items: start;
 `
 
 const TitelStyled = styled.h2`
-font-size: 1.1em;
 margin: 0;
-color: var(--grey-50);
+color: var(--grey-main);
 text-align: center;
 `

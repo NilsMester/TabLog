@@ -36,7 +36,7 @@ text-align: center;
 color: var(--grey-50);
 `
 
-const CopyLinkIconStyled = styled(HiOutlineClipboardCopy)`
+    const CopyLinkIconStyled = styled(HiOutlineClipboardCopy)`
 color: var(--secondary1);
 height: 30px;
 width: 30px;

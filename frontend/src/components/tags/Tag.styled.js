@@ -8,21 +8,21 @@ export default function TagStyled({onClick, children}){
             <RightHide/>
             <LeftHide/>
             <BorderVisualWrapper>
-                <ChildStyled>
                 {children}
-                </ChildStyled>
             </BorderVisualWrapper>
         </VisualBorder>
     )
 }
 
 const VisualBorder = styled.div`
-    width: 105px;
+    width: 112px;
     height: 30px;
     position: relative;
     padding: 2px;
+    margin-right: 4px;
     border-radius: 4px;
-    z-index: 1; 
+    z-index: 1;
+    
     background: linear-gradient(
         to right,
     var(--orange-75),
@@ -37,7 +37,7 @@ const VisualBorder = styled.div`
     display: block;
     position: absolute;
     top: 7px;
-    left: -4px;
+    left: -5px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -50,7 +50,7 @@ const VisualBorder = styled.div`
     display: block;
     position: absolute;
     top: 7px;
-    right: -9px;
+    right: -10px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -75,7 +75,7 @@ const BorderVisualWrapper = styled.div`
     display: block;
     position: absolute;
     top: 7px;
-    left: -4px;
+    left: -5px;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -88,7 +88,7 @@ const BorderVisualWrapper = styled.div`
     display: block;
     position: absolute;
     top: 7px;
-    right: -9px;
+    right: -10px;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -100,7 +100,7 @@ const LeftHide = styled.div`
     position: absolute;
     top:6px;
     left: 2px;
-    width: 11px;
+    width: 10px;
     height: 18px;
     background: var(--grey-50);
     z-index: 8;
@@ -108,13 +108,9 @@ const LeftHide = styled.div`
 const RightHide = styled.div`
    position: absolute;
     top: 6px;
-    right: -11px;
-    width: 11px;
+    right: -10px;
+    width: 10px;
     height: 18px;
     background: var(--white1);
     z-index: 4;
-`
-const ChildStyled = styled.p`
-     z-index: 10;
-     font-size: 0.9em;
 `

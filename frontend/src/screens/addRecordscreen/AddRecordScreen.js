@@ -31,10 +31,12 @@ export default function AddRecordScreen() {
 
             <Header titel="New Record"/>
             <MainGridStyled>
-                <RecordForm onSubmit={handleSave} recordData={recordData} setRecordData={setRecordData} />
+                <FormStyled onSubmit={handleSubmit}>
+                <RecordForm onSave={handleSave} recordData={recordData} setRecordData={setRecordData} />
+                </FormStyled>
                 <SideBarForm sidebar tags={filteredUserTagList} onTagClick={onTagClick} searchTerm={searchTerm} setSearchTerm={setSearchTerm} recordData={recordData} setRecordData={setRecordData}/>
             </MainGridStyled>
-            <TabBar newAndChange onSave={handleSave} recordData={recordData}/>
+            <TabBar onSave={handleSave} recordData={recordData}/>
         </>
     );
 
@@ -49,19 +51,24 @@ export default function AddRecordScreen() {
         history.push('/');
     }
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        handleSave(recordData);
+    }
+
 }
+
+const FormStyled = styled.form`
+    display: grid;
+    grid-template-rows: min-content 1fr min-content  min-content 0.5fr min-content;
+    grid-row-gap: 12px;
+    padding: 10px 0 10px 10px;
+
+`;
 
 const MainGridStyled = styled.div`
 display: grid;
 grid-template-columns: 1fr min-content;
-grid-template-rows: min-content min-content min-content min-content min-content;
-grid-template-areas: 
-" link link"
-"tags sidebar"
-"titel sidebar"
-"description sidebar"
-"preview preview";
-row-gap: 24px;
 position: relative;
 `
 
